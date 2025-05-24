@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Burger Haven</title>
+   <link rel="stylesheet" href="../style.css/about.css">
+</head>
+<body>
+     <header>
+  <div class="header-content">
+    <div class="brand">
+      <h1>Burger Haven</h1>
+      <p>Where Every Bite is a Delight</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <main>
+    <section class="section" aria-label="Our Story">
+      <img src="../Pictures/chef cooking.jpg" alt="Burger Chef Cooking" />
+      <div class="section-content">
+        <h2>Our Story</h2>
+        <p>
+          Founded in 2010, Burger Haven began as a small family-owned food truck with a passion for crafting perfect burgers. Over the years, we've grown into a beloved local eatery while holding onto our commitment to homemade quality and community spirit.
+        </p>
+      </div>
+    </section>
+    <section class="section" aria-label="Quality Ingredients">
+      <img src="../Pictures/fresh ingredients.jpg" alt="Fresh Ingredients" />
+      <div class="section-content">
+        <h2>Quality Ingredients</h2>
+        <p>
+          We believe great burgers start with the best ingredients. That's why we source fresh, locally produced meats, organic vegetables, and artisanal buns to ensure every bite bursts with flavor and freshness.
+        </p>
+      </div>
+    </section>
+    <section class="section" aria-label="Customer Commitment">
+      <img src="../Pictures/happy customer.jpg" alt="Happy Customers" />
+      <div class="section-content">
+        <h2>Commitment to Customers</h2>
+        <p>
+          At Burger Haven, our customers are family. We strive to provide friendly service, a welcoming atmosphere, and mouth-watering burgers made just the way you like them. Your satisfaction is our top priority.
+        </p>
+      </div>
+    </section>
+          <p>
+        To be the go-to destination for burger lovers, known for our commitment to quality, innovation, and customer satisfaction, while fostering a sense of community and belonging.
+      </p>
+    </section>
+     <section id="mission-vision" aria-label="Mission and Vision" class="section">
+      <h2>Our Mission</h2>
+      <p>
+        To deliver the highest quality burgers made from fresh, locally sourced ingredients while providing exceptional service and a welcoming atmosphere for our community.
+      </p>
+      <h2>Our Vision</h2>
+      <p>
+        To be the go-to destination for burger lovers, known for our commitment to quality, innovation, and customer satisfaction, while fostering a sense of community and belonging.
+      </p>
+    </section>
+
+    <section id="faqs" aria-label="Frequently Asked Questions" class="section">
+      <h2>Frequently Asked Questions (FAQs)</h2>
+
+      <div class="faq">
+        <h3 tabindex="0">What are your hours of operation?</h3>
+        <p>We are open from 11 AM to 10 PM, seven days a week.</p>
+      </div>
+      <div class="faq">
+        <h3 tabindex="0">Do you offer vegetarian or vegan options?</h3>
+        <p>Yes, we have a variety of vegetarian and vegan burgers available on our menu.</p>
+      </div>
+      <div class="faq">
+        <h3 tabindex="0">Can I place an order for pickup?</h3>
+        <p>Absolutely! You can place your order online for pickup or call us directly.</p>
+      </div>
+      <div class="faq">
+        <h3 tabindex="0">Do you cater for events?</h3>
+        <p>Yes, we offer catering services for events. Please contact us for more details.</p>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    &copy; 2024 Burger Haven. All rights reserved.
+  </footer>
+  <script>
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq h3').forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.parentElement.classList.toggle('active');
+      });
+      faq.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          faq.parentElement.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

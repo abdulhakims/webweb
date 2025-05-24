@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Confirmation - Burger Haven</title>
+    <link rel="stylesheet" href="../style.css/confirm.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="brand">
+        <h1>Burger Haven</h1>
+        <p>Where Every Bite is a Delight</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="order-box" role="region" aria-live="polite">
+      <h2>Order Confirmation</h2>
+      <p class="order-detail" id="orderDetail">Loading your order details...</p>
+      <button class="confirm-btn" id="confirmBtn">Confirm Order</button>
+    </div>
+  </main>
+  <footer>
+    &copy; 2024 Burger Haven. All rights reserved.
+  </footer>
+  <script>
+    // Get query parameters for product and price
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product') || 'Unknown Product';
+    const price = params.get('price') || '--';
+
+    const orderDetailEl = document.getElementById('orderDetail');
+    const confirmBtn = document.getElementById('confirmBtn');
+
+    orderDetailEl.textContent = `You are about to purchase: ${product} for $${price}`;
+
+    confirmBtn.addEventListener('click', () => {
+      alert(`Thank you for purchasing the ${product}! Your order has been received.`);
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
